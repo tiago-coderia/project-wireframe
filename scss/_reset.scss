@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    font-size: 6.25%;
+}
+
+body {
+    font-size: 14rem;
+    font-family: 'Sora', sans-serif;
+    color: var(--grey-colors-300);
+}
+
+main {
+    margin: 0 auto;
+}
+
+a {
+    color: #000;
+}
+
+
+h1 {
+    font-weight: 600;
+    font-size: clamp(1em, 9vw, 4em);
+    letter-spacing: -1rem;
+    line-height: 60rem;
+    color: var(--grey-colors-100);
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 32rem;
+    letter-spacing: -1rem;
+    line-height: 40rem;
+    color: var(--grey-colors-100);
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 24rem;
+    color: var(--brand-colors-grey);
+    letter-spacing: -1rem;
+    line-height: 30rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240rem;
+    margin: 0 auto;
+    padding: 0 15rem;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+}

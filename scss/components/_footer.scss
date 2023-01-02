@@ -1,0 +1,88 @@
+footer {
+    background: black;
+    @include flex(space-between, center, row);
+
+    .footer-config {
+        @include flex(space-between, start, row);
+        border-bottom: 1px solid var(--grey-colors-300);
+        padding: 70rem 0;
+
+
+        a {
+            color: var(--white);
+        }
+
+        &--logo {
+            p {
+                color: var(--white);
+                padding: 10rem 0;
+            }
+        }
+
+        &--links,
+        &--solutions,
+        &--socialmedia {
+
+
+            color: var(--white);
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        &--logo {
+            width: 280rem;
+            @include flex(space-between, start, column);
+            height: 100%;
+        }
+
+        &--links {
+            @include flex(start, start, column);
+            height: 100%;
+            gap: 20rem;
+
+            ul {
+                @include flex(space-between, start, column);
+                height: 100%;
+            }
+        }
+
+        &--solutions {
+            @include flex(start, start, column);
+            height: 100%;
+            gap: 20rem;
+
+            ul {
+                @include flex(space-between, start, column);
+                gap: 20rem;
+            }
+
+        }
+
+        &--socialmedia {
+            @include flex(space-between, start, column);
+            height: 100%;
+            gap: 20rem;
+
+            div {
+                @include flex(space-between, start, column);
+                gap: 20rem;
+            }
+        }
+
+    }
+
+    .copyright {
+        padding: 30rem 0;
+        color: var(--white);
+    }
+
+}
+
+
+@include devices (tablet) {
+    .footer-config {
+        flex-wrap: wrap;
+    }
+}

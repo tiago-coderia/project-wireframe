@@ -1,0 +1,46 @@
+.section-figures {
+    padding: 100rem 0;
+    background: var(--grey-colors-100);
+    @include flex(center, center, row);
+
+    .figures {
+        @include flex(space-between, center, column);
+
+        &-config {
+            @include flex(space-between, center, row);
+            width: 100%;
+
+            &--text {
+                @include flex(space-between, start, column);
+
+                h2,
+                p {
+                    color: var(--white)
+                }
+            }
+        }
+
+        &-images {
+            @include flex(space-between, center, row);
+            flex-wrap: wrap;
+            grid-gap: 30rem;
+            margin-top: 50rem;
+        }
+
+
+    }
+
+}
+
+@include devices (tablet) {
+    .figures-images {
+        &--thumbs {
+            width: 100%;
+        }
+    }
+
+    .figures-config {
+        flex-wrap: wrap;
+        gap: 40rem;
+    }
+}

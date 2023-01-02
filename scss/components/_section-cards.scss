@@ -1,0 +1,73 @@
+.section-cards {
+    padding: 100rem 0;
+    background: var(--grey-colors-100);
+    @include flex(center, center, column);
+    border-bottom: 1rem solid var(--grey-colors-400);
+
+    .container {
+        height: 100%;
+        @include flex(center, center, column)
+    }
+
+    .cards-header {
+        text-align: center;
+
+        h2 {
+            color: var(--white);
+        }
+
+        p {
+            color: var(--white);
+        }
+    }
+
+    .cards-config {
+        @include flex(center, center, row);
+        margin-top: 48rem;
+    }
+
+    .cards {
+        width: 100%;
+        max-width: 384rem;
+        height: 384rem;
+        background: var(--grey-colors-200);
+        @include flex(center, center, column);
+        text-align: center;
+        padding: 48rem;
+        margin: 10rem;
+        transition: transform 0.5s ease;
+
+        &:hover {
+            background: var(--white);
+            cursor: pointer;
+            transform: scale(1.03);
+
+            h3 {
+
+                color: var(--grey-colors-100);
+            }
+
+            p {
+                color: var(--grey-colors-100);
+                padding: 8rem 0;
+            }
+        }
+
+        svg {
+            margin-bottom: 40rem;
+        }
+
+        p {
+            color: var(--white-colors-text);
+            padding: 8rem 0;
+        }
+    }
+}
+
+@include devices (tablet) {
+    .section-cards {
+        .cards-config {
+            flex-wrap: wrap;
+        }
+    }
+}

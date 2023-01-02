@@ -1,0 +1,53 @@
+.section-cta {
+    height: 508rem;
+    background: var(--grey-colors-200);
+
+    @include flex(space-between, center, row);
+
+    .cta-header {
+        @include flex(space-between, center, column);
+        height: 204rem;
+
+        h2,
+        p {
+            color: var(--white);
+            margin-top: 20rem;
+            width: 100%;
+            max-width: 690rem;
+        }
+
+        p {
+            padding: 0 30rem;
+            text-align: center;
+        }
+
+    }
+}
+
+@include devices (tablet) {
+    .cta-header--texts {
+        text-align: center;
+
+    }
+
+    .cta-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        gap: 40rem;
+    }
+
+    .section-cta .cta-header {
+        height: auto;
+    }
+
+    .section-cta .cta-header h2,
+    .section-cta .cta-header p {
+        color: var(--white);
+        margin-top: 0;
+        width: 100%;
+        max-width: 690rem;
+    }
+}

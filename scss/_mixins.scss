@@ -1,0 +1,28 @@
+@mixin flex($justify, $align, $dir) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $dir;
+}
+
+@mixin devices ($breakpoint) {
+    //the name of the mixin is devices
+
+    @if $breakpoint ==first {
+        @media only screen and (max-width: 1045px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==tablet {
+        @media only screen and (max-width: 680px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==mobile {
+        @media only screen and (max-width: 481px) {
+            @content;
+        }
+    }
+}

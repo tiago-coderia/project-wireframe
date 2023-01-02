@@ -1,0 +1,36 @@
+header {
+    background: var(--grey-colors-800);
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+
+    .container {
+        nav {
+            @include flex(space-between, center, row);
+
+            .menu {
+                display: flex;
+                gap: 32rem;
+            }
+
+            .menu-mobile {
+                display: none;
+            }
+        }
+    }
+}
+
+@include devices (first) {
+    .menu {
+        display: none !important;
+    }
+
+    .menu-mobile {
+        display: block !important;
+    }
+}

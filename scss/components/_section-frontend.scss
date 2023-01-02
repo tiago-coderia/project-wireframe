@@ -1,0 +1,52 @@
+.section-frontend {
+    height: 640rem;
+    padding: 72rem 0;
+    margin-top: 88rem;
+
+    @include flex(space-between, center, row);
+
+    .frontend {
+        @include flex(space-between, center, row);
+
+        &--texts {
+            width: 100%;
+            max-width: 640rem;
+            gap: 40rem;
+            @include flex(space-between, start, column);
+
+            p {
+                max-width: 430rem;
+                margin-top: 20rem;
+            }
+        }
+    }
+}
+
+@include devices(first) {
+    .section-frontend {
+        height: auto
+    }
+
+    .frontend {
+        flex-wrap: wrap;
+
+        &--texts {
+            max-width: 100% !important;
+            text-align: center;
+
+            p {
+                max-width: 100%;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+
+        &--image {
+            margin: 20rem auto;
+        }
+
+        a.button-pink {
+            margin: 0 auto;
+        }
+    }
+}

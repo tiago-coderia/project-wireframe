@@ -1,0 +1,34 @@
+@mixin button {
+    color: var(--grey-colors-400);
+    font-size: 16rem;
+    font-weight: normal;
+    padding: 12rem 24rem;
+    transition: var(--ease);
+    width: 100%;
+}
+
+a.menu--link {
+    background: var(--grey-colors-50);
+    @include button;
+
+    &:hover {
+        background: var(--brand-colors-pink);
+        color: var(--white-colors-text);
+    }
+
+    &.cta {
+        background: var(--brand-colors-pink);
+    }
+
+    &.button-pink {
+        background: var(--brand-colors-pink);
+        color: var(--grey-colors-100);
+        max-width: 290rem;
+        width: 100%;
+
+        &:hover {
+            color: var(--white-colors-text);
+        }
+    }
+
+}
